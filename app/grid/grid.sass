@@ -1,0 +1,196 @@
+.line-row
+    display: grid
+
+    //построение колонок
+
+    //создается 3 колонки каждая по 200px
+    grid-template-columns: 200px 200px 200px
+
+ /*колонки делятся на фракциии, 1 колонка в 2 раза больше,
+ 2 колонка в 5 раз больше, 3 колонка в 1 раз больше,
+ ширина колонок соразмерна контенту
+ */
+    grid-template-columns: 2fr 5fr 1fr
+
+    //повторение колонок 3 раза у каждой одинаковая фракция
+    grid-template-columns: repeat(3, 1fr)
+
+    //повторение 3 строк у каждой одинаковая фракция
+    grid-template-rows: repeat(3, 1fr)
+
+    //растояние между колонками(подобно margin)
+    grid-column-gap: 15px
+
+    //расстояние между строками
+    grid-row-gap: 15px
+
+    //задавание имен колонкам [col], задавание имен строкам [row]
+    grid-template-columns: repeat(12, [col]1fr)
+    grid-template-rows: repeat(8, [row]1fr)
+
+.item-grid1
+    //управление расположениями элементов по величене контейнера
+
+    //элемент начинается с 3 линии в колонке
+    grid-column-start: 3
+
+    //элемент заканчивается на 4 линии в колонке
+    grid-column-end: 4
+
+    //элемент начинает с 3 линии строки
+    grid-row-start: 3
+
+    //элемент заканчивается на 4 линии строки
+    grid-row-end: 4
+
+    //краткая запись
+    grid-row: 3 / 4
+    grid-column: 3 / 4
+
+    //элемент будет занимать от 1 до 4 (элемент имеет 3 колонки)
+    grid-column: col 1 / col 4
+
+    //элемент будет занимать от 1 до 4 включительно (имеет 4 колонки)
+    grid-column: col 1 / span 4
+
+    //элемент будет начинаться с 3 линии и занимать всю высоту до последней линии контейнера
+    grid-row: row 3 / row 9
+
+    //высота элемента будет равна 4 строкам
+    grid-row: row 3 / span 4
+
+
+//выравнивание
+
+.item-grid1
+    //выравнивает по вертикали
+
+    //элемент вверху контейнера
+    align-self: start
+
+    //элемент по центру контейнера
+    align-self: center
+
+    //элемент прижат к низу контейнера
+    align-self: end
+    
+
+    //выравнивание по горизонтали
+
+    //элемент оказывается в самом начале горизонтальной оси
+    justify-self: start
+
+    //в конце горизонтальной оси
+    justify-self: end
+
+    //поцентру горизонтальной оси
+    justify-self: center
+
+//выравниваени grid контайнера
+
+    //выравнивает элемент контейнера по цетру горизонтали
+    justify-items: center
+
+    //выравнивает элемент котнтейнерапо центру вертикали
+    align-items: center
+
+//выравнивание grid сетки, применяется к grid контейнеру
+
+    //выравнивает сетку по левому краю(начало)
+    justify-content: start
+
+    //выравнивает сетку по правому краю(конец сетки)
+    justify-content: end
+
+    //выравнивает сетку внутри grid контейнера
+    justify-content: center
+
+    //растягивает сетку(срабатывает без фиксированной ширины)
+    justify-content: stretch
+
+    //выравнивание вдоль оси столбца(вертикальной оси)
+    align-content: start
+    align-content: center
+    align-content: end
+    //срабатывает без фиксированной высоты
+    align-content: stretch
+
+//выстраивание элементов
+    //по умолчанию элементы иду друг за другом в строку
+    grid-auto-flow: row
+
+    //элементы перестраиваются в колонку
+    grid-auto-flow: column
+
+    //увеличение 2 и 3 элемента в 2 раза за счет span 2
+.item-grid:nth-of-type(2), .item-grid:nth-of-type(3)
+    grid-column: span 2
+
+    //элемент подстраивается под пустое пространство
+    //свойство dense является заполнителем пустого пространства
+    grid-auto-flow: row dense
+
+//вложенность
+    //заполнят пустое пространнство, минимальное значение элемента 200px, 
+    //максимальная auto, задается контейнеру
+    grid-template-columns: repeat(auto-fill, minmax(200px, 500px))
+    //задается вложенному контейнеру
+    grid-template-columns: repeat(2, auto)
+
+//адаптивность
+
+    //auto-fill будет анализировать пустое пространство и добавлять новый блок
+    grid-template-columns: repeat(auto-fill, 100px)
+
+    //auto-fit растягивает дочерние элементы на всю ширину
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto))
+
+body
+    display: grid
+    grid-template-columns: minmax(150px, 200px) 1fr minmax(150px, 200px)
+
+    //визуализация колонок за счет наименования
+    grid-template-areas: "header header header" "nav main aside" "footer footer footer"
+
+    //наименование секций колонок
+header
+    grid-area: header
+nav
+    grid-area: nav
+aside
+    grid-area: aside
+main
+    grid-area: main
+footer
+    grid-area: footer
+
+@media screen and ( max-width:575px)
+    body
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-areas: "header header" "nav main" "footer footer"
+
+@media screen and ( max-width:375px)
+    body
+        grid-template-columns: 1fr
+        grid-template-areas: "header" "nav" "main" "footer"
+
+
+
+
+@media screen and ( max-width:1920px)
+    .grid-wrap
+        max-width: 80% 
+@media screen and ( max-width:1670px)
+    .grid-wrap
+        max-width: 85%
+@media screen and ( max-width:1260px)
+    .grid-wrap
+        max-width: 90%
+@media screen and ( max-width:768px)
+    .grid-wrap
+        max-width: 80% 
+@media screen and ( max-width:575px)
+    .grid-wrap
+        max-width: 95%
+
+        

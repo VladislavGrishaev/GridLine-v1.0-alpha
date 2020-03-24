@@ -1,0 +1,69 @@
+.form-field
+    display: flex
+    flex-direction: column
+    margin-bottom: 15px
+
+form .form-field input 
+    padding-top: 20px
+    padding-bottom: 20px
+    padding-left: 10px
+    padding-right: 10px
+    border: 1px solid #000
+    border-radius: 5px
+    width: 250px
+    font-size: 14px
+
+input[type="checkbox"] 
+    width: auto
+    position: absolute
+    visibility: hidden
+
+
+.form-field input::placeholder 
+    font-size: 14px
+
+.form-field input, .form-field input:focus, .form-field input:active 
+    background: transparent
+
+.check-label 
+    display: flex
+    position: relative
+    cursor: pointer
+    
+.check-input 
+    margin: 0
+
+.check-mark 
+    width: 20px
+    height: 20px
+    position: absolute
+    top: 0
+    left: 0
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+    background: #fff
+    border: 2px solid #205df6
+    border-radius: 2px
+    
+
+.check-mark::after
+    display: none
+    width: 15px
+    height: 15px
+    position: absolute
+    top: -4px
+    left: 0px
+    font: normal normal normal 20px/1 FontAwesome
+    text-rendering: auto
+    -webkit-font-smoothing: antialiased
+    content: "\f00c"
+    color: #000
+
+.check-label .check-input:checked~.check-mark::after
+    display: block
+
+.check-label p
+    font-size: 12px
+    margin-left: 30px
+    margin-top: -2px
+

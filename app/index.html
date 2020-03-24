@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Framework gulp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/gridline.css">
+    <!-- <link rel="stylesheet" href="css/gridline.min.css"> -->
+
+</head>
+<style>
+    span {
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+
+    }
+
+    header {
+        background-color: rgb(245, 197, 94);
+    }
+
+    .grid-wrap {
+        margin-bottom: 30px;
+    }
+
+    .col-8,
+    .col-4,
+    .col-4-start,
+    .col-4-mid,
+    .col-4-end,
+    .col-1-start,
+    .col-1-two,
+    .col-1-three,
+    .col-1-four,
+    .col-1-five,
+    .col-1-six,
+    .col-1-seven,
+    .col-1-eight,
+    .col-1-nine,
+    .col-1-ten,
+    .col-1-eleven,
+    .col-1-end,
+    .col-6-start,
+    .col-6-end,
+    .col-2-start,
+    .col-2-end,
+    .col-2-two,
+    .col-2-three,
+    .col-2-four,
+    .col-2-five,
+    .col-3-start,
+    .col-3-two,
+    .col-3-three,
+    .col-3-end,
+    .col-5-start,
+    .col-5-end,
+    .col-7-start,
+    .col-7-end,
+    .col-8-start,
+    .col-9-start,
+    .col-10-start,
+    .col-11-start,
+    .col-12,
+    .col-11-end,
+    .col-10-end,
+    .col-9-end,
+    .col-8-end {
+        background: rgb(231, 172, 172);
+        border: 1px solid;
+        padding: 10px;
+    }
+</style>
+
+<body>
+
+    <header>
+        <div class="grid-wrap">
+            <div class="line-row">
+                <nav class="nav-grid">
+                    <ul>
+                        <li><a href="">Главная</a></li>
+                        <li><a href="">Новости</a></li>
+                        <li><a href="">Каталог</a></li>
+                        <li><a href="">О нас</a></li>
+                        <li><a href="">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!--column 1-->
+    <div class="grid-wrap">
+        <div class="line-row">
+            <div class="col-1-start"><span>col 1</span>
+            </div>
+            <div class="col-1-two"><span>col 1</span>
+            </div>
+            <div class="col-1-three"><span>col 1</span>
+            </div>
+            <div class="col-1-four"><span>col 1</span>
+            </div>
+            <div class="col-1-five"><span>col 1</span>
+            </div>
+            <div class="col-1-six"><span>col 1</span>
+            </div>
+            <div class="col-1-seven"><span>col 1</span>
+            </div>
+            <div class="col-1-eight"><span>col 1</span>
+            </div>
+            <div class="col-1-nine"><span>col 1</span>
+            </div>
+            <div class="col-1-ten"><span>col 1</span>
+            </div>
+            <div class="col-1-eleven"><span>col 1</span>
+            </div>
+            <div class="col-1-end"><span>col 1</span>
+            </div>
+        </div>
+    </div>
+
+    <!--column 2-->
+    <div class="grid-wrap">
+        <div class="line-row">
+            <div class="col-2-start">
+                <span>col 2</span>
+            </div>
+            <div class="col-2-two">
+                <span>col 2</span>
+            </div>
+            <div class="col-2-three">
+                <span>col 2</span>
+            </div>
+            <div class="col-2-four">
+                <span>col 2</span>
+            </div>
+            <div class="col-2-five">
+                <span>col 2</span>
+            </div>
+            <div class="col-2-end">
+                <span>col 2</span>
+            </div>
+        </div>
+    </div>
+
+    <!--column 3-->
+    <section class="grid-wrap">
+        <div class="line-row">
+            <div class="col-3-start"><span>col 3</span></div>
+            <div class="col-3-two"><span>col 3</span></div>
+            <div class="col-3-three"><span>col 3</span></div>
+            <div class="col-3-end"><span>col 3</span></div>
+        </div>
+    </section>
+
+    <!--column 4-->
+    <section class="grid-wrap">
+        <div class="line-row">
+            <div class="col-4-start"><span>col 4</span>
+            </div>
+            <div class="col-4-mid"><span>col 4</span>
+            </div>
+            <div class="col-4-end"><span>col 4</span>
+            </div>
+        </div>
+    </section>
+
+    <!--column 5-->
+    <section class="grid-wrap">
+        <div class="line-row">
+            <div class="col-5-start"><span>col 5</span></div>
+            <div class="col-7-end"><span>col 7</span></div>
+        </div>
+    </section>
+
+    <!--column 6-->
+    <section class="grid-wrap">
+        <div class="line-row">
+            <div class="col-6-start">
+                <span>col 6</span>
+            </div>
+            <div class="col-6-end">
+                <span>col 6</span>
+            </div>
+        </div>
+    </section>
+
+    <!--column 7-->
+    <section class="grid-wrap">
+        <div class="line-row">
+            <div class="col-7-start"><span>col 7</span></div>
+            <div class="col-5-end"><span>col 5</span></div>
+        </div>
+    </section>
+
+    <!--column 8-->
+    <section class="grid-wrap">
+        <div class="line-row">
+            <div class="col-8-start"><span>col 8</span></div>
+            <div class="col-4-end"><span>col 4</span></div>
+        </div>
+    </section>
+    <section class="grid-wrap">
+        <div class="line-row">
+            <div class="col-4-start"><span>col 4</span></div>
+            <div class="col-8-end"><span>col 8</span></div>
+        </div>
+    </section>
+
+    <!--column 9-->
+    <section class="grid-wrap">
+        <div class="line-row">
+            <div class="col-9-start fill"><span>col 9</span></div>
+            <div class="col-3-end fill"><span>col 3</span></div>
+        </div>
+    </section>
+    <section class="grid-wrap">
+        <div class="line-row">
+            <div class="col-3-start fill"><span>col 3</span></div>
+            <div class="col-9-end fill"><span>col 9</span></div>
+        </div>
+    </section>
+
+    <!--column 10-->
+    <section class="grid-wrap">
+        <div class="line-row">
+            <div class="col-10-start fill"><span>col 10</span></div>
+            <div class="col-2-end fill"><span>col 2</span></div>
+        </div>
+    </section>
+
+    <section class="grid-wrap">
+        <div class="line-row">
+            <div class="col-2-start fill"><span>col 2</span></div>
+            <div class="col-10-end fill"><span>col 10</span></div>
+        </div>
+    </section>
+
+    <!--column 11-->
+    <section class="grid-wrap">
+        <div class="line-row">
+            <div class="col-11-start"><span>col 11</span></div>
+            <div class="col-1-end no-fill"><span>col 1</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid-wrap">
+        <div class="line-row">
+            <div class="col-1-start fill-start"><span>col 1</span></div>
+            <div class="col-11-end fill-end"><span>col 11</span></div>
+        </div>
+    </section>
+
+    <!--column 12-->
+    <section class="grid-wrap">
+        <div class="line-row">
+            <div class="col-12"><span>col 12</span></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="grid-wrap">
+        <div class="line-row">
+            <form method="">
+                <div class="form-field">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" placeholder="Имя">
+                </div>
+                <div class="form-field">
+                    <label for="phone-number">Ваш телефон</label>
+                    <input type="text" id="phoneNumber" placeholder="+7(___)___-__-__" value="">
+                </div>
+                <div class="form-field">
+                    <label for="checkIinput" class="check-label">
+                        <input type="checkbox" id="checkIinput" class="check-input">
+                        <span class="check-mark"></span>
+                        <p>Входить автоматически</p>
+                    </label>
+                </div>
+                <button type="submit" class="btn">Регистрация</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- <script src="js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/gridline.js"></script>
+
+    <script>
+
+    </script>
+
+
+</body>
+
+</html>

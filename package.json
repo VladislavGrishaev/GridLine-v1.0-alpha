@@ -1,0 +1,35 @@
+{
+  "name": "gridline",
+  "version": "1.0.0",
+  "description": "developed a css framework for creating sites on a partial basis bootstrap 4",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vladislav Grishaev",
+  "license": "ISC",
+  "keywords": [
+    "sass",
+    "css",
+    "jquery",
+    "grid",
+    "website development"
+  ],
+  "browserslist": [
+    "last 16 versions",
+    ">1%"
+  ],
+  "devDependencies": {
+    "browser": "^0.2.6",
+    "browser-sync": "^2.26.7",
+    "browserslist": "^4.8.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-rename": "^2.0.0",
+    "node-normalize-scss": "^8.0.1",
+    "node-sass-tilde-importer": "^1.0.2"
+  },
+  "dependencies": {
+    "gulp-sass": "^4.0.2"
+  }
+}

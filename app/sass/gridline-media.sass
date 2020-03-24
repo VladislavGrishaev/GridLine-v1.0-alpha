@@ -1,0 +1,120 @@
+@media screen and ( min-width:1440px)
+    .grid-wrap
+        max-width: 1170px
+
+    .col-2-start,  .col-2-four
+        grid-column: 1/5
+
+    .col-2-two, .col-2-five
+        grid-column: 5/9
+        
+    .col-2-three, .col-2-end
+        grid-column: 9/13
+
+
+@media screen and ( max-width:1440px)
+    .col-1-start, .col-1-five, .col-1-nine
+        grid-column: 1/4 !important
+
+    .col-1-two, .col-1-six, .col-1-ten
+        grid-column: 4/7 !important
+
+    .col-1-three, .col-1-seven, .col-1-eleven
+        grid-column: 7/10 !important
+
+    .col-1-four, .col-1-eight, .col-1-end
+        grid-column: 10/13  !important
+    
+    .no-fill
+        grid-column: 12/13 !important
+    .fill-start
+        grid-column: 1/2 !important
+
+    
+@media screen and (max-width: 1439px)
+    .grid-wrap
+        max-width: 1080px
+
+
+@media screen and ( max-width:1199px)
+    .grid-wrap
+        max-width: 960px
+
+    .col-11-start, .no-fill, .fill-start, .fill-end
+        grid-column: 1/-1 !important
+
+    
+@media screen and ( max-width:992px)
+    .grid-wrap
+        max-width: 720px
+
+    .col-2-start, .col-2-three, .col-2-five   
+        grid-column: 1/7 !important
+
+    .col-2-two, .col-2-four, .col-2-end
+        grid-column: 7/13 !important
+    
+    .fill
+        grid-column: 1/-1 !important
+
+
+@media screen and ( max-width:769px)
+    .grid-wrap
+        max-width: 600px
+
+    .col-4-start, .col-4-mid
+        grid-column: span 6 !important
+        
+    .col-4-start, .col-4-mid, .col-4-end, .col-8-start, .col-8-end
+        grid-column: 1/-1 !important
+
+    .col-3-start, .col-3-two, .col-3-three, .col-3-end, .col-5-start, .col-5-end, .col-7-start, .col-7-end
+        grid-column: span 6 !important
+
+    .fill
+        grid-column: 1/-1 !important
+
+
+@media screen and ( max-width:640px)
+    .grid-wrap
+        max-width: 520px
+    
+    .col-1-start, .col-1-two, .col-1-three, .col-1-four,
+    .col-1-five, .col-1-six, .col-1-seven, .col-1-eight, 
+    .col-1-nine, .col-1-ten, .col-1-eleven, .col-1-end,
+        grid-column: span 6 !important
+
+    .col-8, .col-4, .col-9-start
+        grid-column: 1/13 !important
+
+    .fill, .no-fill, .fill-start
+        grid-column: 1/-1 !important
+
+
+@media screen and ( max-width:540px)
+    .grid-wrap
+        width: auto !important
+        margin-left: 15px !important
+        margin-right: 15px !important
+    .col-6-start, .col-6-end
+        grid-column: 1/-1 !important
+
+@media screen and ( max-width: 460px)
+    .col-1-start, .col-1-two, .col-1-three, .col-1-four,
+    .col-1-five, .col-1-six, .col-1-seven, .col-1-eight, 
+    .col-1-nine, .col-1-ten, .col-1-eleven, .col-1-end,
+    .col-3-start, .col-3-two, .col-3-three, .col-3-end,
+    .col-5-start, .col-5-end, .col-7-start, .col-7-end
+        grid-column: 1/-1 !important
+    
+    .col-2-start, .col-2-two, .col-2-three, .col-2-four, .col-2-five, .col-2-end
+        grid-column: span 12 !important
+
+    .col-4-start, .col-4-mid
+        grid-column: span 12 !important
+
+    
+@media screen and ( max-width:375px)
+    th, td
+        padding: 8px !important
+    
